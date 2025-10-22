@@ -62,3 +62,15 @@ a {
     outline-offset: rem(4);
     transition-duration: 0s !important;
 }
+
+section:not(:first-child) {
+    padding-block: rem(120);
+
+    @include tablet {
+        padding-block: rem(80);
+    }
+
+    @include mobile {
+        padding-block: rem(48);
+    }
+}
