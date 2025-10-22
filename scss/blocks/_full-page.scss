@@ -1,0 +1,78 @@
+@use 'helpers' as *;
+
+.full-page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--color-peach-accent);
+
+    @include mobile-s {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: rem(130);
+        margin-left: rem(20);
+        padding-left: calc((100vw - 1348px) / 2);
+
+        @include mobile {
+            padding-right: rem(40);
+        }
+
+        @include mobile-s {
+            margin: 0;
+            padding: rem(48) rem(20);
+        }
+    }
+
+    &__title {
+        color: var(--color-dark-blue);
+
+        &:not(:last-child) {
+            margin-bottom: rem(24);
+        }
+    }
+
+    &__description {
+        color: var(--color-dark-grey);
+
+        &:not(:last-child) {
+            margin-bottom: rem(134);
+
+            @include mobile {
+                margin-bottom: rem(67);
+            }
+
+            @include mobile-s {
+                margin-bottom: rem(90);
+            }
+        }
+    }
+
+    &__link {
+        color: var(--color-dark-blue);
+        padding-bottom: rem(4);
+        border-bottom: var(--border-link);
+        align-self: start;
+
+        @include hover {
+            color: var(--color-primary);
+            border-color: var(--color-primary);
+        }
+    }
+
+    &__image {
+        img {
+            width: 100%;
+            height: rem(600);
+            object-fit: cover;
+
+            @include mobile-s {
+                height: rem(450);
+            }
+        }
+    }
+}
