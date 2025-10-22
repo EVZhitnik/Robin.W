@@ -492,7 +492,6 @@ section:not(:first-child) {
 .work__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
   gap: 1.5rem;
 }
 @media (width <= 47.99875rem) {
