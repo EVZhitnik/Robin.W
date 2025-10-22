@@ -1,0 +1,64 @@
+@use 'helpers' as *;
+
+.work {
+    &__heading {
+        display: grid;
+        row-gap: rem(8);
+
+        &:not(:last-child) {
+            margin-bottom: rem(40);
+        }
+
+        &-title {
+            max-width: rem(689);
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        gap: rem(24);
+
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile-s {
+            grid-template-columns: 1fr;
+            row-gap: rem(40);
+        }
+    }
+
+    &__num {
+        font-size: rem(117);
+    }
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: rem(22);
+            
+            @include mobile-s {
+                margin-bottom: rem(16);
+            }
+        }
+
+        
+    }
+
+    &__accent-green {
+        color: var(--color-green-accent);
+    }
+
+    &__accent-blue {
+        color: var(--color-blue-accent);
+    }
+
+    &__accent-pink {
+        color: var(--color-pink-accent);
+    }
+
+    &__description {
+        max-width: rem(368);
+    }
+}
