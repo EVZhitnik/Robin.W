@@ -1,0 +1,96 @@
+@use 'helpers' as *;
+
+.hero {
+    @include mobile {
+        display: contents;
+    }
+
+    &__inner {
+        position: relative;
+        
+        @include mobile {
+            display: contents;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: 4;
+            top: rem(165);
+            left: 0;
+            width: rem(750);
+            height: rem(650);
+            background: url('../img/hero/hero-bg-desktop.jpg') center/contain no-repeat;
+
+            @include tablet {
+                opacity: 0.3;
+            }
+
+            @include mobile {
+                width: rem(385);
+                height: rem(650); 
+                background: url('../img/hero/hero-bg-tablet.jpg') center/contain no-repeat;
+                opacity: 1;
+            }
+
+            @include mobile-s {
+                top: rem(72);
+                width: 100%;
+                height: rem(288);
+                background: url('../img/hero/hero-bg-mobile.jpg') center/cover no-repeat;
+            }
+        }
+
+        &::after {
+            @include square(rem(900));
+
+            content: '';
+            position: absolute;
+            z-index: 3;
+            top: 0;
+            right: 0;
+            background-color: var(--color-dark-blue);
+
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+
+    &__content {
+        display: grid;
+        row-gap: rem(32);
+        position: relative;
+        z-index: 5;
+        max-width: rem(778);
+        padding-block: rem(225);
+        padding-right: rem(40);
+        margin-left: auto;
+
+        @include mobile {
+            max-width: rem(408);
+            padding-top: rem(167);
+            padding-bottom: rem(172);
+        }
+
+        @include mobile-s {
+            max-width: 100%;
+            margin: 0;
+            padding-top: rem(335);
+            padding-bottom: rem(48);
+            padding-inline: rem(20);
+        }
+    }
+
+    &__title {
+        span {
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    &__description {
+        font-weight: 400;
+        font-size: rem(18);
+        color: var(--color-text);
+    }
+}
