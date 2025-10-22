@@ -1,0 +1,77 @@
+@use 'helpers' as *;
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    animation-name: scrolling-header;
+    animation-fill-mode: both;
+    animation-timeline: scroll();
+    animation-range: rem(100) rem(200);
+    background-color: var(--color-base);
+
+    @keyframes scrolling-header {
+        to {
+            box-shadow: 0 0 1rem 0 var(--color-text);
+        }
+    }
+
+    &__overlay {
+        @include mobile {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 3rem;
+            padding: 1rem;
+            background-color: var(--color-base);
+            transition-duration: var(--transition-duration);
+
+            &:not(.is-active) {
+                @include hide;
+                
+                translate: 100%
+            }
+        }
+    }
+
+    &__body {
+        @include flexbox(true, space-between, center);
+
+        column-gap: rem(30);
+
+        @include mobile {
+            height: rem(72);
+        }
+    }
+
+    &__menu {
+        &-list {
+            display: flex;
+
+            @include mobile {
+                flex-direction: column;
+                align-items: center;
+                row-gap: rem(30);
+            }
+        }
+
+        &-item {
+            padding: rem(32) rem(24);
+            transition-duration: var(--transition-duration);
+
+            @include mobile {
+                padding: rem(5);
+            }
+
+            @include hover {
+                background-color: var(--color-primary);
+            }
+        }
+
+        &-link {
+            color: var(--color-text);
+        }
+    }
+}
