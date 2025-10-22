@@ -1,0 +1,244 @@
+@font-face {
+  font-family: "Sen";
+  src: url("../fonts/Sen-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Heebo";
+  src: url("../fonts/Sen-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bahnschrift";
+  src: url("../fonts/Bahnschrift.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+:where(h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+:where(ul[class]) {
+  list-style: none;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+p {
+  --paragraphMarginBottom: 24px;
+  margin-block: 0;
+}
+
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  height: 100%;
+  scrollbar-gutter: stable;
+}
+
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  line-height: 1.5;
+}
+
+a:where([class]) {
+  display: inline-flex;
+}
+
+button,
+label {
+  cursor: pointer;
+}
+
+svg * {
+  transition-property: fill, stroke;
+}
+
+:where(table) {
+  border-collapse: collapse;
+  border-color: currentColor;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --color-base: #000000;
+  --color-dark-blue: #181823;
+  --color-light-grey: #8491A0;
+  --color-dark-grey: #5B6876;
+  --color-text: #FFFFFF;
+  --color-primary: #5221E6;
+  --color-green-accent: #3CC74E;
+  --color-blue-accent: #609BFF;
+  --color-pink-accent: #E95D90;
+  --color-peach-accent: #FFF3E4;
+  --color-violet-accent: #FBE4FF;
+  --border: 0.0625rem solid var(--color-dark-blue);
+  --border-link: 0.0625rem solid var(--color-light-grey);
+  --border-card: 0.0625rem solid var(--color-dark-grey);
+  --font-family-base: "Sen", sans-serif;
+  --font-family-accent: "Bahnschrift", sans-serif;
+  --container-width: 80.9375rem;
+  --container-padding-x: 1.25rem;
+  --transition-duration: 0.2s;
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@media (width <= 47.99875rem) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media (width > 47.99875rem) {
+  .visible-mobile {
+    display: none !important;
+  }
+}
+
+html.is-lock {
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  font-size: 1rem;
+  color: var(--color-light-grey);
+  background-color: var(--color-base);
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+h1, .h1 {
+  font-size: clamp(2rem, 0.7610497238rem + 5.0828729282vw, 4.875rem);
+  line-height: normal;
+}
+
+h2, .h2 {
+  font-size: clamp(2rem, 1.3805248619rem + 2.5414364641vw, 3.4375rem);
+  line-height: normal;
+}
+
+h3, .h3 {
+  font-size: 1.5rem;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+}
+a[class] {
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 0.125rem dashed var(--color-primary);
+  outline-offset: 0.25rem;
+  transition-duration: 0s !important;
+}
+
+/*# sourceMappingURL=main.css.map */
