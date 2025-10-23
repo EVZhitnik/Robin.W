@@ -28,19 +28,4 @@
             row-gap: rem(48);
         }
     }
-
-    &__image {
-        img {
-            @include mobile {
-                @include square(100%);
-            }
-        }
-    }
-
-    &__content {
-        display: grid;
-        row-gap: rem(13);
-        padding: rem(40) rem(32);
-        background-color: var(--color-dark-blue);
-    }
 }
