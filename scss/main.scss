@@ -12,12 +12,15 @@
 @use 'blocks/subtitle';
 
 @use 'blocks/full-page';
+@use 'blocks/link-base';
 
 @use 'blocks/skillset';
 @use 'blocks/brands';
 
 @use 'blocks/projects';
 @use 'blocks/button';
+
+@use 'blocks/dribbble';
 
 // .header,
 // main > *:not(:last-child),
