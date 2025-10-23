@@ -1,16 +1,11 @@
 @use 'helpers' as *;
 
 .hero {
-    @include mobile {
-        display: contents;
-    }
+    display: contents;
 
     &__inner {
         position: relative;
-        
-        @include mobile {
-            display: contents;
-        }
+        display: contents;
 
         &::before {
             content: '';

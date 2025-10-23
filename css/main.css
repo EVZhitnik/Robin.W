@@ -274,18 +274,12 @@ section:nth-child(10) {
   }
 }
 
-@media (width <= 47.99875rem) {
-  .hero {
-    display: contents;
-  }
+.hero {
+  display: contents;
 }
 .hero__inner {
   position: relative;
-}
-@media (width <= 47.99875rem) {
-  .hero__inner {
-    display: contents;
-  }
+  display: contents;
 }
 .hero__inner::before {
   content: "";
@@ -376,11 +370,11 @@ section:nth-child(10) {
   animation-fill-mode: both;
   animation-timeline: scroll();
   animation-range: 6.25rem 12.5rem;
-  background-color: var(--color-base);
 }
 @keyframes scrolling-header {
   to {
     box-shadow: 0 0 1rem 0 var(--color-text);
+    background-color: var(--color-base);
   }
 }
 @media (width <= 47.99875rem) {

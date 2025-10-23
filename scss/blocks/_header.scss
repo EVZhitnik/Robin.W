@@ -8,11 +8,11 @@
     animation-fill-mode: both;
     animation-timeline: scroll();
     animation-range: rem(100) rem(200);
-    background-color: var(--color-base);
 
     @keyframes scrolling-header {
         to {
             box-shadow: 0 0 1rem 0 var(--color-text);
+            background-color: var(--color-base);
         }
     }
 
