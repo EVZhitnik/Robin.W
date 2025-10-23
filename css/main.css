@@ -627,4 +627,133 @@ section:nth-child(10) {
   }
 }
 
+.skillset__inner:not(:last-child) {
+  margin-bottom: 7.5rem;
+}
+.skillset__body {
+  display: grid;
+  grid-template-columns: 21.6666666667vw 1fr;
+  column-gap: 1.5rem;
+}
+.skillset__body:not(:last-child) {
+  margin-bottom: 7.5rem;
+}
+@media (width <= 47.99875rem) {
+  .skillset__body:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+}
+@media (width <= 30.06125rem) {
+  .skillset__body:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .skillset__body {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+}
+@media (width <= 30.06125rem) {
+  .skillset__body {
+    row-gap: 4.3125rem;
+  }
+}
+.skillset__heading {
+  display: grid;
+  row-gap: 1.5rem;
+  align-self: start;
+}
+.skillset__heading-description {
+  max-width: 23rem;
+}
+@media (width <= 47.99875rem) {
+  .skillset__heading-description {
+    max-width: 100%;
+  }
+}
+.skillset__list {
+  display: grid;
+  grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+  column-gap: 1.5rem;
+  row-gap: 3rem;
+}
+@media (width <= 30.06125rem) {
+  .skillset__list {
+    grid-template: 1fr/1fr;
+  }
+}
+.skillset__icon:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.skillset__title:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+.skillset__description {
+  max-width: 23rem;
+}
+@media (width <= 47.99875rem) {
+  .skillset__description {
+    max-width: 100%;
+  }
+}
+
+.brands {
+  overflow-x: hidden;
+}
+.brands__list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  width: 100vw;
+  padding-left: calc((100vw - 1348px) / 2);
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+}
+@media (width <= 47.99875rem) {
+  .brands__list {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+    scroll-snap-type: none;
+    overflow: auto;
+  }
+}
+.brands__item {
+  border: var(--border);
+  padding: 3.4375rem 7.8125rem;
+}
+@media (width <= 47.99875rem) {
+  .brands__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 8.75rem;
+  }
+}
+.brands__icon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+@media (width <= 30.06125rem) {
+  .brands__icon svg {
+    width: 70%;
+    height: 70%;
+  }
+}
+@media (any-hover: hover) {
+  .brands__icon:hover svg path {
+    fill: var(--color-primary);
+  }
+}
+@media (any-hover: none) {
+  .brands__icon:active svg path {
+    fill: var(--color-primary);
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
