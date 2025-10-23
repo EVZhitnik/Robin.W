@@ -42,6 +42,14 @@
         }
     }
 
+    &__image {
+        img {
+            @include mobile {
+                @include square(100%);
+            }
+        }
+    }
+
     &__content {
         border: var(--border-card);
         padding: rem(64);
