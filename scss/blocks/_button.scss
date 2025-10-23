@@ -1,0 +1,27 @@
+@use 'helpers' as *;
+
+.button {
+    display: block;
+    font-weight: 700;
+    font-size: rem(18);
+    text-transform: uppercase;
+    color: var(--color-text);
+    background-color: transparent;
+    border: none;
+    border: var(--border-button);
+
+    @include hover {
+        background-color: var(--color-primary);
+    }
+
+    &--projects {
+        padding: rem(24) rem(32);
+        margin-top: rem(91);
+        margin-bottom: rem(78); 
+        justify-self: center;
+
+        @include mobile {
+            margin-block: rem(40);
+        }
+    }
+}
