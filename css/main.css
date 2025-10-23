@@ -558,6 +558,9 @@ section:nth-child(10) {
     flex-direction: column;
   }
 }
+.full-page--inst {
+  background-color: var(--color-violet-accent);
+}
 .full-page__body {
   display: flex;
   flex-direction: column;
