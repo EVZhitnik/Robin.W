@@ -10,6 +10,10 @@
         flex-direction: column;
     }
 
+    &--inst {
+        background-color: var(--color-violet-accent);
+    }
+
     &__body {
         display: flex;
         flex-direction: column;
