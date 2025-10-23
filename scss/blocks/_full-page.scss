@@ -56,18 +56,6 @@
         }
     }
 
-    &__link {
-        color: var(--color-dark-blue);
-        padding-bottom: rem(4);
-        border-bottom: var(--border-link);
-        align-self: start;
-
-        @include hover {
-            color: var(--color-primary);
-            border-color: var(--color-primary);
-        }
-    }
-
     &__image {
         img {
             width: 100%;
