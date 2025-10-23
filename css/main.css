@@ -147,6 +147,7 @@ svg * {
   --border: 0.0625rem solid var(--color-dark-blue);
   --border-link: 0.0625rem solid var(--color-light-grey);
   --border-card: 0.0625rem solid var(--color-dark-grey);
+  --border-button: 0.0625rem solid var(--color-primary);
   --font-family-base: "Sen", sans-serif;
   --font-family-accent: "Bahnschrift", sans-serif;
   --container-width: 80.9375rem;
@@ -753,6 +754,77 @@ section:nth-child(10) {
 @media (any-hover: none) {
   .brands__icon:active svg path {
     fill: var(--color-primary);
+  }
+}
+
+.projects__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem;
+}
+@media (width <= 47.99875rem) {
+  .projects__inner {
+    grid-template-columns: 1fr;
+  }
+}
+.projects__heading {
+  display: grid;
+  row-gap: 0.5rem;
+}
+.projects__heading:not(:last-child) {
+  margin-bottom: 5rem;
+}
+.projects__list {
+  display: grid;
+  row-gap: 1.5rem;
+}
+@media (width <= 47.99875rem) {
+  .projects__list {
+    row-gap: 3rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .projects__image img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.projects__content {
+  display: grid;
+  row-gap: 0.8125rem;
+  padding: 2.5rem 2rem;
+  background-color: var(--color-dark-blue);
+}
+
+.button {
+  display: block;
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  color: var(--color-text);
+  background-color: transparent;
+  border: none;
+  border: var(--border-button);
+}
+@media (any-hover: hover) {
+  .button:hover {
+    background-color: var(--color-primary);
+  }
+}
+@media (any-hover: none) {
+  .button:active {
+    background-color: var(--color-primary);
+  }
+}
+.button--projects {
+  padding: 1.5rem 2rem;
+  margin-top: 5.6875rem;
+  margin-bottom: 4.875rem;
+  justify-self: center;
+}
+@media (width <= 47.99875rem) {
+  .button--projects {
+    margin-block: 2.5rem;
   }
 }
 
