@@ -1,0 +1,24 @@
+@use 'helpers' as *;
+
+.photo {
+    &__heading {
+        display: grid;
+        row-gap: rem(24);
+        
+        &:not(:last-child) {
+            margin-bottom: rem(64);
+
+            @include mobile-s {
+                margin-bottom: rem(40);
+            }
+        }
+
+        &-description {
+            max-width: rem(550);
+
+            @include mobile {
+                max-width: 100%;
+            }
+        }
+    }
+}

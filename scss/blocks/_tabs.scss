@@ -1,0 +1,132 @@
+@use 'helpers' as *;
+
+.tabs {
+    display: grid;
+    row-gap: rem(40);
+
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(24);
+
+        @include mobile-s {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__button {
+        &.is-active {
+            background-color: var(--color-primary)
+        }
+    }
+
+    &__body {
+        position: relative;
+        width: 100%;
+        height: rem(420);
+        overflow: hidden;
+        
+        @include mobile {
+            height: 100%;
+        }
+    }
+
+    &__content {
+        @include square(100%);
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%);
+
+        @include mobile {
+            position: relative;
+        }
+
+        &:not(.is-visible):not(.is-back):not(.is-forward) {
+            display: none;
+        }
+
+        &.is-visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+            display: block;
+        }
+
+        &.is-forward {
+            z-index: 2;
+            pointer-events: auto;
+            animation-name: tab-forward;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both;
+        }
+
+        @keyframes tab-forward {
+            0% {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateX(-100%);
+            }
+            30% {
+                opacity: 0;
+                visibility: hidden;
+            }
+            100% {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0);
+            }
+        }
+
+        &.is-back {
+            z-index: 1;
+            pointer-events: none;
+            animation-name: tab-back;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both;
+        }
+
+        @keyframes tab-back {
+            0% {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0);
+            }
+            70% {
+                opacity: 0;
+                visibility: hidden;
+            }
+            100% {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateX(100%);
+            }
+        }
+    }
+
+    &__image {
+        @include mobile {
+            @include square(100%);
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: rem(24);
+
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile-s {
+            grid-template-columns: 1fr;
+        }
+    }
+}
