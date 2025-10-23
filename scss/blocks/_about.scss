@@ -1,0 +1,74 @@
+@use 'helpers' as *;
+
+.about {
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: rem(24);
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__heading {
+        max-width: rem(535);
+
+        @include mobile {
+            max-width: 100%;
+            margin-bottom: rem(64);
+        }
+
+        &-title {
+            &:not(:last-child) {
+                margin-bottom: rem(24);
+            }
+        }
+        
+        &-description {
+            &:not(:last-child) {
+                margin-bottom: rem(40);
+            }
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: rem(120);
+
+            @include mobile {
+                margin-bottom: rem(64);
+            }
+        }
+    }
+
+    &__content {
+        border: var(--border-card);
+        padding: rem(64);
+
+        @include tablet {
+            padding: rem(32);
+        }
+    }
+
+    &__quote {
+        font-weight: 700;
+        font-size: rem(24);
+        color: var(--color-text);
+
+        &:not(:last-child) {
+            margin-bottom: rem(64);
+        }
+    }
+
+    &__author {
+        display: grid;
+        row-gap: rem(4);
+        font-size: rem(18);
+        color: var(--color-dark-grey);
+
+        span:nth-child(1) {
+            font-weight: 700;
+        }
+    }
+}

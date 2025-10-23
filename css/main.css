@@ -870,4 +870,64 @@ section:nth-child(10) {
   border-radius: 0.5rem;
 }
 
+.about__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem;
+}
+@media (width <= 47.99875rem) {
+  .about__inner {
+    grid-template-columns: 1fr;
+  }
+}
+.about__heading {
+  max-width: 33.4375rem;
+}
+@media (width <= 47.99875rem) {
+  .about__heading {
+    max-width: 100%;
+    margin-bottom: 4rem;
+  }
+}
+.about__heading-title:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.about__heading-description:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+.about__item:not(:last-child) {
+  margin-bottom: 7.5rem;
+}
+@media (width <= 47.99875rem) {
+  .about__item:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+}
+.about__content {
+  border: var(--border-card);
+  padding: 4rem;
+}
+@media (width <= 63.99875rem) {
+  .about__content {
+    padding: 2rem;
+  }
+}
+.about__quote {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-text);
+}
+.about__quote:not(:last-child) {
+  margin-bottom: 4rem;
+}
+.about__author {
+  display: grid;
+  row-gap: 0.25rem;
+  font-size: 1.125rem;
+  color: var(--color-dark-grey);
+}
+.about__author span:nth-child(1) {
+  font-weight: 700;
+}
+
 /*# sourceMappingURL=main.css.map */
