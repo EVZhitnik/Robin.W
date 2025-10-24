@@ -859,6 +859,9 @@ section:nth-child(10) {
 .button--tabs {
   padding: 0.75rem 1rem;
 }
+.button--form {
+  padding-block: 1.5rem;
+}
 
 .dribbble__heading {
   max-width: 38.75rem;
@@ -1101,6 +1104,71 @@ section:nth-child(10) {
   .tabs__list {
     grid-template-columns: 1fr;
   }
+}
+
+.started__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem;
+}
+@media (width <= 47.99875rem) {
+  .started__inner {
+    grid-template-columns: 1fr;
+  }
+}
+.started__heading {
+  display: grid;
+  row-gap: 1.5rem;
+  align-self: start;
+  justify-self: end;
+}
+@media (width <= 47.99875rem) {
+  .started__heading {
+    margin-bottom: 3rem;
+  }
+}
+.started__heading-description {
+  font-size: 1.125rem;
+  max-width: 32.875rem;
+}
+@media (width <= 47.99875rem) {
+  .started__heading-description {
+    max-width: 100%;
+  }
+}
+
+.feedback-form {
+  display: grid;
+  row-gap: 2.5rem;
+  max-width: 32.8125rem;
+}
+@media (width <= 47.99875rem) {
+  .feedback-form {
+    max-width: 100%;
+  }
+}
+
+.field {
+  display: grid;
+  row-gap: 0.5rem;
+}
+.field__label {
+  font-weight: 400;
+  color: var(--color-text);
+}
+.field__input, .field__textarea {
+  color: var(--color-text);
+  background-color: var(--color-dark-blue);
+  border: none;
+  padding-inline: 1rem;
+}
+.field__input {
+  height: 3.125rem;
+}
+.field__textarea {
+  height: 6.25rem;
+  padding-block: 0.3125rem;
+  resize: vertical;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,29 @@
+@use 'helpers' as *;
+
+.field {
+    display: grid;
+    row-gap: rem(8);
+
+    &__label {
+        font-weight: 400;
+        color: var(--color-text);
+    }
+
+    &__input,
+    &__textarea {
+        color: var(--color-text);
+        background-color: var(--color-dark-blue);
+        border: none;
+        padding-inline: rem(16);
+    }
+
+    &__input {
+        height: rem(50);
+    }
+
+    &__textarea {
+        height: rem(100);
+        padding-block: rem(5);
+        resize: vertical;
+    }
+}

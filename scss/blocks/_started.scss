@@ -1,0 +1,33 @@
+@use 'helpers' as *;
+
+.started {
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: rem(24);
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__heading {
+        display: grid;
+        row-gap: rem(24);
+        align-self: start;
+        justify-self: end;
+
+        @include mobile {
+            margin-bottom: rem(48);
+        }
+        
+        &-description {
+            font-size: rem(18);
+            max-width: rem(526);
+
+            @include mobile {
+                max-width: 100%;
+            }
+        }
+    }
+}
