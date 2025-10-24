@@ -67,4 +67,16 @@
             }
         }
     }
+
+    &__link {
+        width: fit-content;
+        color: var(--color-dark-blue);
+        padding-bottom: rem(4);
+        border-bottom: var(--border-link);
+
+        @include hover {
+            color: var(--color-primary);
+            border-color: var(--color-primary);
+        }
+    }
 }

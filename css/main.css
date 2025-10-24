@@ -695,6 +695,24 @@ section:nth-child(10) {
     height: 28.125rem;
   }
 }
+.full-page__link {
+  width: fit-content;
+  color: var(--color-dark-blue);
+  padding-bottom: 0.25rem;
+  border-bottom: var(--border-link);
+}
+@media (any-hover: hover) {
+  .full-page__link:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+}
+@media (any-hover: none) {
+  .full-page__link:active {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+}
 
 .skillset__inner:not(:last-child) {
   margin-bottom: 7.5rem;
