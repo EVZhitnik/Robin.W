@@ -1,0 +1,96 @@
+@use 'helpers' as *;
+
+.heading {
+    display: grid;
+    
+    &--alternate {
+        row-gap: rem(8);
+    }
+
+    &--base {
+        row-gap: rem(24);
+        align-self: start;
+    }
+
+    &--full {
+        max-width: rem(595);
+        align-self: start;
+
+        @include mobile-s {
+            max-width: 100%;
+        }
+    }
+
+    &__title {
+        &--work {
+            max-width: rem(689);
+        }
+
+        &--projects {
+            max-width: rem(572);
+
+            @include mobile {
+                max-width: 100%;
+            }
+        }
+
+        &--full {
+            &:not(:last-child) {
+                margin-bottom: rem(24);
+            }
+        }
+    }
+
+    &__description {
+        font-size: rem(18);
+
+        &--skillset {
+            max-width: rem(368);
+
+            @include mobile {
+                max-width: 100%;
+            }
+        }
+
+        &--full {
+            &:not(:last-child) {
+                margin-bottom: rem(40);
+            }
+        }
+
+        &--photo {
+            max-width: rem(588);
+
+            @include mobile {
+                max-width: 100%;
+            }
+        }
+
+        &--started {
+            max-width: rem(526);
+
+            @include mobile {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__link {
+        width: fit-content;
+        padding-bottom: rem(4);
+        border-bottom: var(--border-link);
+
+        @include hover {
+            color: var(--color-primary);
+            border-color: var(--color-primary);
+        }
+
+        &--dark {
+            color: var(--color-dark-blue);
+        }
+
+        &--white {
+            color: var(--color-text);
+        }
+    }
+}

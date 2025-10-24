@@ -12,23 +12,8 @@
     }
 
     &__heading {
-        max-width: rem(535);
-
         @include mobile {
-            max-width: 100%;
             margin-bottom: rem(64);
-        }
-
-        &-title {
-            &:not(:last-child) {
-                margin-bottom: rem(24);
-            }
-        }
-        
-        &-description {
-            &:not(:last-child) {
-                margin-bottom: rem(40);
-            }
         }
     }
 

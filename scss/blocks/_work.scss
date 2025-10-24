@@ -2,15 +2,8 @@
 
 .work {
     &__heading {
-        display: grid;
-        row-gap: rem(8);
-
         &:not(:last-child) {
             margin-bottom: rem(40);
-        }
-
-        &-title {
-            max-width: rem(689);
         }
     }
 
@@ -41,8 +34,6 @@
                 margin-bottom: rem(16);
             }
         }
-
-        
     }
 
     &__accent-green {

@@ -2,29 +2,11 @@
 
 .dribbble {
     &__heading {
-        max-width: rem(620);
-
-        @include mobile-s {
-            max-width: 100%;
-        }
-
         &:not(:last-child) {
             margin-bottom: rem(120);
 
             @include mobile {
                 margin-bottom: rem(64);
-            }
-        }
-
-        &-title {
-            &:not(:last-child) {
-                margin-bottom: rem(24);
-            }
-        }
-        
-        &-description {
-            &:not(:last-child) {
-                margin-bottom: rem(40);
             }
         }
     }

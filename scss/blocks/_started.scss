@@ -12,22 +12,10 @@
     }
 
     &__heading {
-        display: grid;
-        row-gap: rem(24);
-        align-self: start;
         justify-self: end;
 
         @include mobile {
             margin-bottom: rem(48);
-        }
-        
-        &-description {
-            font-size: rem(18);
-            max-width: rem(526);
-
-            @include mobile {
-                max-width: 100%;
-            }
         }
     }
 }

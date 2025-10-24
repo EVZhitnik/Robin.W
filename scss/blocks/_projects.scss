@@ -8,13 +8,11 @@
 
         @include mobile {
             grid-template-columns: 1fr;
+            row-gap: rem(48);
         }
     }
 
     &__heading {
-        display: grid;
-        row-gap: rem(8);
-
         &:not(:last-child) {
             margin-bottom: rem(80);
         }
