@@ -28,6 +28,10 @@
 @use 'blocks/photo';
 @use 'blocks/tabs';
 
+@use 'blocks/started';
+@use 'blocks/feedback-form';
+@use 'blocks/field';
+
 // .header,
 // main > *:not(:last-child),
 // .footer {

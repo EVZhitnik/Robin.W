@@ -1,0 +1,11 @@
+@use 'helpers' as *;
+
+.feedback-form {
+    display: grid;
+    row-gap: rem(40);
+    max-width: rem(525);
+
+    @include mobile {
+        max-width: 100%;
+    }
+}
