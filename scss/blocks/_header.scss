@@ -58,7 +58,7 @@
         }
 
         &-item {
-            padding: rem(32) rem(24);
+            padding-inline: rem(24);
             transition-duration: var(--transition-duration);
 
             @include mobile {
@@ -71,7 +71,14 @@
         }
 
         &-link {
+            display: inline-flex;
+            align-items: center;
             color: var(--color-text);
+            height: rem(88);
+
+            @include mobile {
+                height: auto;
+            }
         }
     }
 }
