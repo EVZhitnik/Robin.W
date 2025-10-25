@@ -80,3 +80,14 @@ section:nth-child(10) {
         padding-block: rem(48);
     }
 }
+
+#experience,
+#work,
+#photo,
+#contact {
+    scroll-margin-top: rem(88);
+    
+    @include mobile {
+        scroll-margin-top: rem(72);
+    }
+}

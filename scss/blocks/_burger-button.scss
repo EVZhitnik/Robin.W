@@ -22,13 +22,13 @@
     &.is-active {
         .burger-button__line {
             &:nth-child(1) {
-                transform: translateY(rem(9)) rotate(45deg);
+                transform: rotate(45deg) translate(rem(4), rem(4));
             }
 
             &:nth-child(2) {
-                position: static;
+                transform: rotate(-45deg) translate(rem(2), rem(-2));
                 width: rem(18);
-                transform: translateY(rem(1)) rotate(-45deg);
+                left: 0;
             }
         }
     }
@@ -38,6 +38,7 @@
         height: rem(3);
         background-color: var(--color-burger-button);
         transition-duration: var(--transition-duration);
+        transform-origin: center;
 
         &:nth-child(1) {
             width: rem(18);

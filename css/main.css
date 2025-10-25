@@ -275,6 +275,21 @@ section:nth-child(10) {
   }
 }
 
+#experience,
+#work,
+#photo,
+#contact {
+  scroll-margin-top: 5.5rem;
+}
+@media (width <= 47.99875rem) {
+  #experience,
+  #work,
+  #photo,
+  #contact {
+    scroll-margin-top: 4.5rem;
+  }
+}
+
 .hero {
   display: contents;
 }
@@ -473,18 +488,19 @@ section:nth-child(10) {
   }
 }
 .burger-button.is-active .burger-button__line:nth-child(1) {
-  transform: translateY(0.5625rem) rotate(45deg);
+  transform: rotate(45deg) translate(0.25rem, 0.25rem);
 }
 .burger-button.is-active .burger-button__line:nth-child(2) {
-  position: static;
+  transform: rotate(-45deg) translate(0.125rem, -0.125rem);
   width: 1.125rem;
-  transform: translateY(0.0625rem) rotate(-45deg);
+  left: 0;
 }
 .burger-button__line {
   display: block;
   height: 0.1875rem;
   background-color: var(--color-burger-button);
   transition-duration: var(--transition-duration);
+  transform-origin: center;
 }
 .burger-button__line:nth-child(1) {
   width: 1.125rem;

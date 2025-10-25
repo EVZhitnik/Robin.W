@@ -18,14 +18,34 @@ class Header {
     }
 
     onBurgerButtonClick = () => {
+        this.toggleMenu();
+    }
+
+    onMenuLinkClick = () => {
+        this.closeMenu();
+    }
+
+    toggleMenu = () => {
         this.burgerButtonElement.classList.toggle(this.stateClasses.isActive);
         this.overlayElement.classList.toggle(this.stateClasses.isActive);
         document.documentElement.classList.toggle(this.stateClasses.isLock);
     }
 
+    closeMenu = () => {
+        this.burgerButtonElement.classList.remove(this.stateClasses.isActive);
+        this.overlayElement.classList.remove(this.stateClasses.isActive);
+        document.documentElement.classList.remove(this.stateClasses.isLock);
+    }
+
     bindEvents() {
         this.burgerButtonElement.addEventListener('click', this.onBurgerButtonClick);
+        
+        this.overlayElement.addEventListener('click', (event) => {
+            if (event.target.classList.contains('header__menu-link')) {
+                this.onMenuLinkClick();
+            }
+        });
     }
-};
+}
 
 export default Header;
